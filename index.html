@@ -122,9 +122,9 @@ em{font-style:normal;color:var(--green)}
 .cause-blocks{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin:2.5rem 0 2rem}
 .cause-block{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:1.75rem 2rem;min-width:160px;text-align:center;transition:all 0.2s}
 .cause-block:hover{border-color:var(--green-border);box-shadow:0 4px 20px var(--green-subtle);transform:translateY(-3px)}
-.cause-block-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:var(--gray-200);line-height:1;margin-bottom:0.5rem}
+.cause-block-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:var(--green);line-height:1;margin-bottom:0.5rem;opacity:0.5}
 .cause-block-title{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--gray-900)}
-.cause-block-sub{font-size:0.78rem;color:var(--gray-400);margin-top:0.25rem}
+.cause-block-sub{font-size:0.78rem;color:var(--gray-600);margin-top:0.25rem;font-weight:400}
 .cause-plus{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:300;color:var(--gray-200)}
 .cause-footer{display:inline-block;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:1rem 1.75rem;font-size:0.9rem;color:var(--gray-600);font-style:italic}
 
@@ -133,8 +133,8 @@ em{font-style:normal;color:var(--green)}
 .method-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
 .method-card{background:var(--bg-alt);border:1px solid var(--gray-200);border-radius:var(--r-xl);padding:2rem;transition:all 0.2s}
 .method-card:hover{background:var(--white);border-color:var(--green-border);box-shadow:0 6px 28px var(--green-subtle);transform:translateY(-4px)}
-.method-card-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2.5rem;font-weight:800;color:var(--gray-200);line-height:1;margin-bottom:1.25rem}
-.method-card:hover .method-card-num{color:rgba(30,58,47,0.15)}
+.method-card-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2.5rem;font-weight:800;color:var(--green);line-height:1;margin-bottom:1.25rem;opacity:0.4}
+.method-card:hover .method-card-num{opacity:0.6}
 .method-badge{display:inline-block;font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);background:var(--green-subtle);border:1px solid var(--green-border);padding:0.2rem 0.65rem;border-radius:100px;margin-bottom:0.75rem}
 .method-card-title{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem}
 .method-card-text{font-size:0.88rem;color:var(--gray-500);line-height:1.72;font-weight:300}
@@ -150,7 +150,7 @@ em{font-style:normal;color:var(--green)}
 .proof-card{border-radius:var(--r-xl);overflow:hidden;border:1px solid rgba(255,255,255,0.06)}
 .proof-card-header{padding:2rem 2.5rem;display:flex;align-items:center;gap:1.5rem;border-bottom:1px solid rgba(255,255,255,0.06)}
 .proof-card-img-wrap{position:relative;overflow:hidden}
-.proof-img{width:100%;height:280px;object-fit:cover;object-position:center;display:block;filter:saturate(0.7) brightness(0.85)}
+.proof-img{width:100%;height:280px;object-fit:cover;object-position:center 30%;display:block;filter:saturate(0.7) brightness(0.85)}
 .proof-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,24,32,0.85) 0%,transparent 50%)}
 .proof-card-body{padding:2.5rem}
 .proof-company-icon{width:40px;height:40px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:0.8rem;color:#fff}
@@ -269,7 +269,7 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,0.05);pad
       <div>
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
-          <span class="hero-badge-text">Para empresas que faturam acima de R$100K/mês</span>
+          <span class="hero-badge-text">Para empresas que faturam +R$100K/mês</span>
         </div>
         <h1>Sua empresa está perdendo dinheiro todos os meses.</h1>
         <p class="lead" style="margin-top:1.25rem">O problema não é marketing. É a falta de direção entre comercial, posicionamento e aquisição.</p>
@@ -302,8 +302,7 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,0.05);pad
 <!-- IDENTIFICATION -->
 <section class="ident">
   <div class="wrap">
-    <div class="ident-inner">
-      <div>
+    <div style="max-width:640px">
         <div class="eyebrow"><span class="eyebrow-dot"></span>O diagnóstico</div>
         <h2>Se você vive isso, o problema não é <em>falta de esforço.</em></h2>
         <ul class="ident-list">
@@ -313,12 +312,8 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,0.05);pad
           <li class="ident-item"><span class="ident-arrow">→</span>O comercial depende de você</li>
           <li class="ident-item"><span class="ident-arrow">→</span>Cresce… mas sem previsibilidade</li>
         </ul>
+        <p style="font-size:0.95rem;color:var(--gray-500);line-height:1.75;font-weight:300;margin-bottom:2rem">Cada um desses pontos tem uma causa. E quase sempre é a mesma. O problema é que ninguém junta tudo isso num diagnóstico e te mostra de onde vem. Até agora.</p>
         <a href="#cta" class="btn btn-primary">Entender meu problema →</a>
-      </div>
-      <div class="ident-aside">
-        <div class="ident-aside-big">Isso não é execução.<br>É <em>direção.</em></div>
-        <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.75;font-weight:300">Cada um desses pontos tem uma causa. E quase sempre é a mesma. O problema é que ninguém junta tudo isso num diagnóstico e te mostra de onde vem. Até agora.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -476,18 +471,20 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,0.05);pad
           <div class="who-photo-role">Head de Growth · M3 Growth</div>
         </div>
       </div>
-      <div style="padding-top:0.5rem">
-        <h2 style="margin-bottom:1.25rem">Aprendi <em>ouvindo.</em><br>Não estudando.</h2>
-        <p class="who-lead">Mais de 4 anos construindo essa metodologia na prática. Não em sala de aula. Não em livro.</p>
-        <p class="who-text">Comecei como gestor de tráfego. Vi de dentro como o dinheiro das empresas sumia sem resultado. Entendia o que estava errado mas não tinha acesso para mudar.</p>
-        <p class="who-text">Depois passei anos como SDR numa empresa de tecnologia. <strong>Ligando todo dia para dezenas de empresários.</strong> Ouvindo as mesmas dores se repetindo. Dono de clínica. Dono de indústria. Prestador de serviço. Segmentos diferentes, problema idêntico.</p>
-        <p class="who-text">Comercial bagunçado. Posicionamento genérico. Marketing sem estrutura. Foi ouvindo essas histórias todos os dias que o M3 Growth tomou forma. <strong>Não é teoria. É o que eu vi acontecer no mercado.</strong></p>
+      <div style="padding-top:0.5rem;display:flex;flex-direction:column;justify-content:center">
+        <h2 style="margin-bottom:1.5rem">Aprendi <em>ouvindo.</em><br>Não estudando.</h2>
+        <p class="who-text">Comecei como gestor de tráfego. Vi o dinheiro das empresas sumir sem resultado — e não tinha acesso pra mudar.</p>
+        <p class="who-text">Depois, anos como SDR. Falando com dezenas de empresários todos os dias. Segmentos diferentes. Problema idêntico.</p>
+        <p class="who-text" style="margin-bottom:0.5rem">Comercial bagunçado.</p>
+        <p class="who-text" style="margin-bottom:0.5rem">Posicionamento genérico.</p>
+        <p class="who-text">Marketing sem estrutura.</p>
+        <p class="who-text" style="margin-top:0.5rem">Foi assim que nasceu o M3 Growth. <strong>Não é teoria. É o que eu vi acontecer no mercado.</strong></p>
         <div class="who-divider"></div>
         <ul class="who-points">
-          <li class="who-point">Acompanhamento semanal durante todo o projeto</li>
-          <li class="who-point">Contrato aberto por fase — sem prazo mínimo engessado</li>
-          <li class="who-point">Foco em resultado mensurável, não em entregáveis</li>
-          <li class="who-point">Método aplicado, não conselho genérico</li>
+          <li class="who-point">Acompanhamento semanal</li>
+          <li class="who-point">Contrato por fase, sem amarra</li>
+          <li class="who-point">Foco em resultado, não entregável</li>
+          <li class="who-point">Método aplicado, não conselho</li>
         </ul>
       </div>
     </div>
